@@ -256,3 +256,46 @@
      margin: 12px 0 !important;
      padding-left: 30px !important;
 }
+
+/* Support/fix for v1.0.7 */
+.wp-pros-cons .section-title {
+    display: none;
+}
+
+.wp-pros-cons .wppc-boxs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.wp-pros-cons ul.wp-pros-cons-list li {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.wp-pros-cons ul.joomdev_wpc_pros_list li:before {
+    content: "\f00c";
+    color: #27C110;
+    font-weight: 900;
+    padding-right: 10px;
+    font-family: 'Font Awesome\ 5 Free';
+}
+
+.wp-pros-cons ul.wp-pros-cons-list li ul {
+    margin-left: 20px;
+    display: block;
+    width: 100%;
+}
+
+.wp-pros-cons ul.joomdev_wpc_cons_list li:before {
+    content: "\f00d";
+    color: #f00;
+    font-weight: 900;
+    padding-right: 10px;
+    font-family: 'Font Awesome\ 5 Free';
+}
