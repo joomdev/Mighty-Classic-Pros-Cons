@@ -127,7 +127,7 @@ function joomdev_wpc_register_menu_page_callback(){
 
 
     		<?php 
-    			if($_GET['settings-updated']){
+    			if( isset($_GET['settings-updated']) ){
 					?>
 						<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible"> 
 							<p><strong>Settings saved.</strong></p>
