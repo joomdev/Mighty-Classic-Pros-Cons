@@ -48,6 +48,10 @@ See description.
 5. Frontend Screenshot.
 
 == Changelog ==
+= 2.0.1 =
+- Fixed: Conflict with older version
+- Fixed: settings variable undefined
+
 = 2.0.0 =
 - Added: 2 new views
 - Added: Option for Border Width & Radius for button 
