@@ -268,17 +268,17 @@
     padding: 0 20px;
 }
 
-.wp-pros-cons ul.wp-pros-cons-list li {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 10px 0;
-    width: 100%;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+.wp-pros-cons .wppc-boxs ul li {
+    list-style-type: none;
 }
 
-.wp-pros-cons ul.joomdev_wpc_pros_list li:before {
+.wp-pros-cons ul li {
+    position: relative;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.wp-pros-cons .pros-content ul li:before {
     content: "\f00c";
     color: #27C110;
     font-weight: 900;
@@ -286,13 +286,7 @@
     font-family: 'Font Awesome\ 5 Free';
 }
 
-.wp-pros-cons ul.wp-pros-cons-list li ul {
-    margin-left: 20px;
-    display: block;
-    width: 100%;
-}
-
-.wp-pros-cons ul.joomdev_wpc_cons_list li:before {
+.wp-pros-cons .cons-content ul li:before {
     content: "\f00d";
     color: #f00;
     font-weight: 900;
