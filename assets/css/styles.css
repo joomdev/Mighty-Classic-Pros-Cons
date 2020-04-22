@@ -88,12 +88,8 @@
 
 .wp-pros-cons ul.wp-pros-cons-list li {
     position: relative;
-    display: -ms-flexbox;
-    display: flex;
     margin: 10px 0;
     width: 100%;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
 }
 
 .wp-pros-cons ul.wp-pros-cons-list li:before {
