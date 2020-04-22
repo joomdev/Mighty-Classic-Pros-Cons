@@ -4,7 +4,7 @@ Donate link: https://mightythemes.com
 Tags: WP Pros & Cons, Pros, Cons, Table, Pros & Cons table
 Requires at least: 3.0
 Tested up to: 5.2.4
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,10 @@ See description.
 5. Frontend Screenshot.
 
 == Changelog ==
+
+= 2.0.3 =
+- Fixed: New Line issue in Pros & Cons
+
 = 2.0.2 =
 - Fixed: Design Conflicts with older version
 
