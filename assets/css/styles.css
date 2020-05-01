@@ -118,7 +118,9 @@
 
 .wp-pros-cons .wppc-verdict-wrapper {
     text-align: center;
-    margin: 10px 10px;
+    margin: 30px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .wp-pros-cons .wppc-btn-wrapper .jd-wppc-btn {

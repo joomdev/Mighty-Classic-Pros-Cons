@@ -71,6 +71,10 @@ function joomdev_wpc_pros_cons($atts, $content){
         color: <?php echo $JoomDev_wpc_options['verdict_text_color']; ?>;
         font-size: <?php echo $JoomDev_wpc_options['verdict_font_size'] . "px"; ?>;
     }
+    
+    .wp-pros-cons .wppc-header .wppc-box-symbol i {
+        font-size: <?php echo $JoomDev_wpc_options['icons_font_size'] . "px"; ?>;
+    }
 
 </style>
 <div class="wp-pros-cons <?php echo $wpc_style; ?>">
@@ -107,7 +111,13 @@ function joomdev_wpc_pros_cons($atts, $content){
             </div>
             <?php echo $cons; ?>
         </div>
-    </div>    
+    </div>
+
+    <?php if ( ! empty($verdict_text) ) { ?>
+        <div class="wppc-verdict-wrapper">
+            <?php echo $verdict_text; ?>
+        </div>
+    <?php } ?>
     
     <?php 
     if($disable_button == 'yes') {
@@ -120,12 +130,6 @@ function joomdev_wpc_pros_cons($atts, $content){
             <?php echo $button_text; ?>
         </a>
     </div>
-    <?php } ?>
-
-    <?php if ( ! empty($verdict_text) ) { ?>
-        <div class="wppc-verdict-wrapper">
-            <?php echo $verdict_text; ?>
-        </div>
     <?php } ?>
 
 </div>

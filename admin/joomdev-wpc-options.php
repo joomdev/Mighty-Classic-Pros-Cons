@@ -154,7 +154,13 @@ function joomdev_wpc_register_menu_page_callback(){
     						<td>
     							<input name="joomdev_wpc_options[box_background_color]" type="text" value="<?php echo isset($joomdev_wpc_options['box_background_color']) ? $joomdev_wpc_options['box_background_color'] : ''; ?>" class="regular-text joomdev-color-picker">
     						</td>
-    					</tr>
+                        </tr>
+                        <tr>
+    						<th>Pros & Cons Icons Size (px)</th>
+    						<td>
+    							<input name="joomdev_wpc_options[icons_font_size]" type="number" min="0" value="<?php echo isset($joomdev_wpc_options['icons_font_size']) ? $joomdev_wpc_options['icons_font_size'] : '26'; ?>" class="regular-text">
+    						</td>
+                        </tr>
     					<tr>
     						<th>Disable Box Border</th>
     						<td>
