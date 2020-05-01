@@ -11,6 +11,8 @@ function get_joomdev_wpc_options(){
 							'button_color' => '#212121',
 							'button_text_color' => '#fff',
 							'button_shape' => 5,
+							'verdict_text_color' => '#000',
+							'verdict_font_size' => '22',
 						);
 
 	$_joomdev_wpc_options = get_option('joomdev_wpc_options', array());
@@ -28,6 +30,7 @@ function joomdev_wpc_extract_shortcode($content){
 			'pros_title' => 'Pros',
 			'cons_title' => 'Cons',
 			'button_text' => 'Get it now',
+			'verdict_text' => '',
 			'pros' => array(),
 			'cons' => array(),
 			'disable_button' => 'no',

@@ -203,6 +203,18 @@ function joomdev_wpc_register_menu_page_callback(){
     							<input name="joomdev_wpc_options[button_shape]" type="number" min="0" value="<?php echo isset($joomdev_wpc_options['button_shape']) ? $joomdev_wpc_options['button_shape'] : '10'; ?>" class="regular-text">
     						</td>
                         </tr>
+                        <tr>
+    						<th>Verdict Text Color</th>
+    						<td>
+    							<input name="joomdev_wpc_options[verdict_text_color]" type="text" value="<?php echo isset($joomdev_wpc_options['verdict_text_color']) ? $joomdev_wpc_options['verdict_text_color'] : ''; ?>" class="regular-text joomdev-color-picker">
+    						</td>
+                        </tr>
+                        <tr>
+    						<th>Verdict Font Size (px)</th>
+    						<td>
+    							<input name="joomdev_wpc_options[verdict_font_size]" type="number" min="0" value="<?php echo isset($joomdev_wpc_options['verdict_font_size']) ? $joomdev_wpc_options['verdict_font_size'] : '22'; ?>" class="regular-text">
+    						</td>
+                        </tr>
                         
     				</tbody>
     			</table>
@@ -235,6 +247,7 @@ function joomdev_wpc_editor_button_popup(){
             'pros_title' => 'Pros',
             'cons_title' => 'Cons',
             'button_text' => 'Get it now',
+            'verdict_text' => '',
             'pros' => array(),
             'cons' => array(),
             'disable_button' => 'no',
@@ -426,6 +439,16 @@ function joomdev_wpc_editor_button_popup(){
                         </div>
                     </div>
                     <div class="clear"></div>
+
+                    <div class="column">
+                        <div class="joomdev_wpc_verdict_text">
+                            <label><h4>Verdict Text</h4>
+                                <input type="text" name="joomdev_wpc_verdict_text" class="regular-text" value="<?php echo $r['verdict_text']; ?>">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
                 </div>
             
                 <div class="joomdev_wpc_save">
@@ -548,6 +571,10 @@ function joomdev_wpc_editor_button_popup(){
                 margin-bottom: 20px;
             }
             .joomdev_wpc_button_text{
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+            .joomdev_wpc_verdict_text{
                 margin-bottom: 10px;
                 margin-top: 10px;
             }
@@ -693,6 +720,9 @@ function joomdev_wpc_editor_button_popup(){
                     var button_rel_attr = $(document).find('[name="joomdev_wpc_button_rel_attr"]').val();
                     button_rel_attr = $.trim(button_rel_attr);
 
+                    var verdict_text = $(document).find('[name="joomdev_wpc_verdict_text"]').val();
+                    verdict_text = $.trim(verdict_text);
+
                     var shortcode_string_pros = '';
                     $(document).find('[name="joomdev_wpc_pro_single[]"]').each(function(){
                         var v = $(this).val();
@@ -712,7 +742,7 @@ function joomdev_wpc_editor_button_popup(){
 
                     var shortcode_string_cons_list = '[joomdev-wpc-cons]<ul class="wp-pros-cons-list wp-cons-list">'+shortcode_string_cons+'</ul>[/joomdev-wpc-cons]';
 
-                    var shortcode_string = '<br>[joomdev-wpc-pros-cons disable_title="'+disable_title+'" wpc_style="'+wpc_style+'" title_tag="'+title_tag+'" title="'+title+'" pros_title="'+pros_title+'" cons_title="'+cons_title+'" button_text="'+button_text+'" disable_button="'+disable_button+'" button_link="'+button_link+'" button_link_target="'+button_link_target+'" button_rel_attr="'+button_rel_attr+'"]'+shortcode_string_pros_list+shortcode_string_cons_list+'[/joomdev-wpc-pros-cons]<br>';
+                    var shortcode_string = '<br>[joomdev-wpc-pros-cons disable_title="'+disable_title+'" wpc_style="'+wpc_style+'" title_tag="'+title_tag+'" title="'+title+'" pros_title="'+pros_title+'" cons_title="'+cons_title+'" button_text="'+button_text+'" disable_button="'+disable_button+'" button_link="'+button_link+'" button_link_target="'+button_link_target+'" button_rel_attr="'+button_rel_attr+'" verdict_text="'+verdict_text+'"]'+shortcode_string_pros_list+shortcode_string_cons_list+'[/joomdev-wpc-pros-cons]<br>';
                     window.parent.send_to_editor(shortcode_string);
                     window.parent.tb_remove();
                     

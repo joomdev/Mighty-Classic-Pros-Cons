@@ -7,23 +7,24 @@ function joomdev_wpc_pros_cons($atts, $content){
 	global $JoomDev_wpc_options;
 
 	$default = array(
-            'disable_title' => 'no',
-            'title' => 'Title Here',
-            'pros_title' => 'Pros',
-            'cons_title' => 'Cons',
-            'button_text' => 'Get it now',
-            'disable_button' => 'no',
-            'button_link' => '',
-            'button_link_target' => '_SELF',
-            'button_rel_attr' => 'nofollow',
-            'wpc_style' => 'wppc-view1',
-			'title_tag' => 'H3',
+        'disable_title' => 'no',
+        'title' => 'Title Here',
+        'pros_title' => 'Pros',
+        'cons_title' => 'Cons',
+        'button_text' => 'Get it now',
+        'verdict_text' => '',
+        'disable_button' => 'no',
+        'button_link' => '',
+        'button_link_target' => '_SELF',
+        'button_rel_attr' => 'nofollow',
+        'wpc_style' => 'wppc-view1',
+        'title_tag' => 'H3',
         );
 	$atts = shortcode_atts(
-                $default,
-                $atts,
-                'joomdev-wpc-pros-cons'
-            );
+            $default,
+            $atts,
+            'joomdev-wpc-pros-cons'
+        );
 
 	extract($atts);
     
@@ -65,6 +66,10 @@ function joomdev_wpc_pros_cons($atts, $content){
     }
     .wp-pros-cons .wppc-btn-wrapper .jd-wppc-btn {
         border-radius: <?php echo $JoomDev_wpc_options['button_shape'] . "px"; ?>;
+    }
+    .wp-pros-cons .wppc-verdict-wrapper {
+        color: <?php echo $JoomDev_wpc_options['verdict_text_color']; ?>;
+        font-size: <?php echo $JoomDev_wpc_options['verdict_font_size'] . "px"; ?>;
     }
 
 </style>
@@ -115,6 +120,12 @@ function joomdev_wpc_pros_cons($atts, $content){
             <?php echo $button_text; ?>
         </a>
     </div>
+    <?php } ?>
+
+    <?php if ( ! empty($verdict_text) ) { ?>
+        <div class="wppc-verdict-wrapper">
+            <?php echo $verdict_text; ?>
+        </div>
     <?php } ?>
 
 </div>

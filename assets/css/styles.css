@@ -116,6 +116,11 @@
     margin: 10px 0 0;
 }
 
+.wp-pros-cons .wppc-verdict-wrapper {
+    text-align: center;
+    margin: 10px 10px;
+}
+
 .wp-pros-cons .wppc-btn-wrapper .jd-wppc-btn {
     -webkit-box-shadow: none;
     text-align: center;
