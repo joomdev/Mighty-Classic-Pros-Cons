@@ -38,9 +38,7 @@ function joomdev_wpc_color_picker( $hook ) {
         wp_enqueue_script( 'jquery-ui-dialog' ); // jquery and jquery-ui should be dependencies, didn't check though...
 		wp_enqueue_style( 'wp-jquery-ui-dialog' );
 
-		wp_enqueue_style( 'joomdev-wpc-admin-styles', plugins_url( '/admin/assets/css/admin-styles.css', __FILE__ ) ); 
-		// FontAwesome library.
-		wp_enqueue_style('joomdev-wpc-admin-styles', '//use.fontawesome.com/releases/v5.8.1/css/all.css');
+		wp_enqueue_style( 'joomdev-wpc-admin-styles', plugins_url( '/admin/assets/css/admin-styles.css', __FILE__ ) );
 }
 
 add_action('admin_footer', 'joomdev_wpc_admin_footer_scripts', 99);
@@ -63,8 +61,6 @@ function joomdev_wpc_init_functions(){
 
 function joomdev_wpc_scripts(){
 	wp_enqueue_style('joomdev-wpc-styles', plugins_url( 'assets/css/styles.css', __FILE__ ));
-	// FontAwesome library.
-	wp_enqueue_style('joomdev-wpc-fontawesome', '//use.fontawesome.com/releases/v5.8.1/css/all.css');
 }
 
 // file ends here

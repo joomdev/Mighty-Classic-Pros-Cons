@@ -47,6 +47,13 @@ See description.
 4. Screen shot to display shortcode.
 5. Frontend Screenshot.
 
+== Media Licenses ==
+
+== Font Awesome Free ==
+FontAwesome Free is free, open source, and GPL friendly.
+* License: https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+* Source: https://fontawesome.com
+
 == Changelog ==
 
 = 2.0.4 =

@@ -60,6 +60,13 @@
     margin: 0 auto;
 }
 
+.wp-pros-cons .wppc-box-symbol img {
+    width: 30px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
 .wp-pros-cons .wppc-box-symbol [class*="fa"] {
     position: absolute;
     top: 50%;
@@ -92,24 +99,16 @@
     width: 100%;
 }
 
-.wp-pros-cons ul.wp-pros-cons-list li:before {
-    content: "\f00c";
-    color: #27C110;
-    font-weight: 900;
-    padding-right: 10px;
-    font-family: 'Font Awesome\ 5 Free';
-}
-
 .wp-pros-cons ul.wp-pros-cons-list li ul {
     margin-left: 20px;
     display: block;
     width: 100%;
 }
 
-.wp-pros-cons .cons-content ul.wp-pros-cons-list li:before {
+/* .wp-pros-cons .cons-content ul.wp-pros-cons-list li:before {
     content: "\f00d";
     color: #f00;
-}
+} */
 
 .wp-pros-cons .wppc-btn-wrapper {
     text-align: center;
@@ -281,18 +280,18 @@
     width: 100%;
 }
 
-.wp-pros-cons .pros-content ul li:before {
-    content: "\f00c";
-    color: #27C110;
-    font-weight: 900;
-    padding-right: 10px;
-    font-family: 'Font Awesome\ 5 Free';
+.wp-pros-cons ul li:before {
+    content: '';
+    padding-right: 25px;
+    background-size: 16px;
+    background-position: 1px;
+    background-repeat: no-repeat;
+}
+
+.wp-pros-cons .pros-content ul li:before {    
+    background-image: url('../icons/check-solid.svg');
 }
 
 .wp-pros-cons .cons-content ul li:before {
-    content: "\f00d";
-    color: #f00;
-    font-weight: 900;
-    padding-right: 10px;
-    font-family: 'Font Awesome\ 5 Free';
+    background-image: url('../icons/times-solid.svg');
 }

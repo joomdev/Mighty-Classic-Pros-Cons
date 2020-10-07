@@ -92,7 +92,7 @@ function joomdev_wpc_pros_cons($atts, $content){
             <div class="wppc-header">
                 <?php if ( ! ($wpc_style == 'wppc-view2' || $wpc_style == 'wppc-view3') ) { ?>
                 <div class="wppc-box-symbol">
-                    <i class="far fa-thumbs-up"></i>
+                    <img src="<?php echo plugins_url( JOOMDEV_WPC_DIR . "/assets/icons/thumbs-up-regular.svg" ); ?>">
                 </div>
                 <?php } ?>
                 <h4 class="wppc-content-title cons-title"><?php echo $pros_title; ?></h4>
@@ -104,7 +104,7 @@ function joomdev_wpc_pros_cons($atts, $content){
             <div class="wppc-header">
                 <?php if ( ! ($wpc_style == 'wppc-view2' || $wpc_style == 'wppc-view3') ) { ?>
                 <div class="wppc-box-symbol">
-                    <i class="far fa-thumbs-down"></i>
+                    <img src="<?php echo plugins_url( JOOMDEV_WPC_DIR . "/assets/icons/thumbs-down-regular.svg" ); ?>">
                 </div>
                 <?php } ?>
                 <h4 class="wppc-content-title cons-title"><?php echo $cons_title; ?></h4>
