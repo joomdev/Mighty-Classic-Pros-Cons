@@ -13,7 +13,7 @@ function get_joomdev_wpc_options(){
 							'button_shape' => 5,
 							'verdict_text_color' => '#000',
 							'verdict_font_size' => '22',
-							'icons_font_size' => '26'
+							'icons_font_size' => '30'
 						);
 
 	$_joomdev_wpc_options = get_option('joomdev_wpc_options', array());

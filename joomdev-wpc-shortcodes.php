@@ -46,7 +46,7 @@ function joomdev_wpc_pros_cons($atts, $content){
 
 	?>
 <style type="text/css">
-    .wp-pros-cons {
+    .wp-classic-pros-cons {
         background: <?php echo $JoomDev_wpc_options['box_background_color'];
         ?>;
         <?php if($JoomDev_wpc_options['disable_box_border']=='yes') {
@@ -60,24 +60,24 @@ function joomdev_wpc_pros_cons($atts, $content){
         ?>
     }
 
-    .wp-pros-cons .wppc-btn-wrapper .jd-wppc-btn {
+    .wp-classic-pros-cons .wppc-btn-wrapper .jd-wppc-btn {
         color: <?php echo $JoomDev_wpc_options['button_text_color']; ?>;
         background: <?php echo $JoomDev_wpc_options['button_color']; ?>;
     }
-    .wp-pros-cons .wppc-btn-wrapper .jd-wppc-btn {
+    .wp-classic-pros-cons .wppc-btn-wrapper .jd-wppc-btn {
         border-radius: <?php echo $JoomDev_wpc_options['button_shape'] . "px"; ?>;
     }
-    .wp-pros-cons .wppc-verdict-wrapper {
+    .wp-classic-pros-cons .wppc-verdict-wrapper {
         color: <?php echo $JoomDev_wpc_options['verdict_text_color']; ?>;
         font-size: <?php echo $JoomDev_wpc_options['verdict_font_size'] . "px"; ?>;
     }
     
-    .wp-pros-cons .wppc-header .wppc-box-symbol i {
-        font-size: <?php echo $JoomDev_wpc_options['icons_font_size'] . "px"; ?>;
+    .wp-classic-pros-cons .wppc-header .wppc-box-symbol img {
+        width: <?php echo $JoomDev_wpc_options['icons_font_size'] . "px"; ?>;
     }
 
 </style>
-<div class="wp-pros-cons <?php echo $wpc_style; ?>">
+<div class="wp-classic-pros-cons <?php echo $wpc_style; ?>">
     <?php 
         if($disable_title == 'yes'){
             // do nothing
