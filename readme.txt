@@ -4,7 +4,7 @@ Donate link: https://mightythemes.com
 Tags: WP Pros & Cons, Pros, Cons, Table, Pros & Cons table
 Requires at least: 3.0
 Tested up to: 5.5
-Stable tag: 2.0.5
+Stable tag: 2.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,6 +55,9 @@ FontAwesome Free is free, open source, and GPL friendly.
 * Source: https://fontawesome.com
 
 == Changelog ==
+
+= 2.0.7 =
+- Added: Icons for Pros & Cons
 
 = 2.0.5 =
 - Improved: Removed FontAwesome CDN and added SVG Icons

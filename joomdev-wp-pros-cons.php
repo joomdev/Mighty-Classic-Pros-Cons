@@ -3,7 +3,7 @@
 	Plugin Name: JoomDev WP Pros & Cons
 	Plugin URI: https://mightythemes.com
 	Description: This plugin provides you the shortcode to show pros/cons on any of the page. It will add a button to editor, which enables you the visual shortcode.
-	Version: 2.0.5
+	Version: 2.0.7
 	Author: MightyThemes
 	Author URI: https://mightythemes.com
 */
@@ -16,7 +16,7 @@ if(!defined('JOOMDEV_WPC_DIR')){
 }
 
 define('JOOMDEV_WPC_MORE_THEMES_PLUGINS_URL', 'https://mightythemes.com');
-define('JOOMDEV_WPC_VER', '1.0.6');
+define('JOOMDEV_WPC_VER', '2.0.7');
 
 include 'joomdev-wpc-functions.php';
 include 'admin/joomdev-wpc-options.php';
@@ -59,8 +59,8 @@ function joomdev_wpc_init_functions(){
 	add_action('wp_enqueue_scripts', 'joomdev_wpc_scripts', 999);
 }
 
-function joomdev_wpc_scripts(){
-	wp_enqueue_style('joomdev-wpc-styles', plugins_url( 'assets/css/styles.css', __FILE__ ));
+function joomdev_wpc_scripts() {
+	wp_enqueue_style('joomdev-wpc-styles', plugins_url( 'assets/css/styles.css', __FILE__ ), false, JOOMDEV_WPC_VER );
 }
 
 // file ends here
