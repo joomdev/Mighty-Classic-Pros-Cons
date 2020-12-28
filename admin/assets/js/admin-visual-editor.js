@@ -1,7 +1,7 @@
-jQuery(function($) {
+( function ( $ ) {
     tinymce.create("tinymce.plugins.joomdev_wpc_shortcode", {
 
-        //url argument holds the absolute url of our plugin directory
+        // url argument holds the absolute url of our plugin directory
         init : function(ed, url) {
 
             //add new button     
@@ -36,4 +36,4 @@ jQuery(function($) {
     });
 
     tinymce.PluginManager.add("joomdev_wpc_shortcode", tinymce.plugins.joomdev_wpc_shortcode);
-});
+} )( jQuery );
