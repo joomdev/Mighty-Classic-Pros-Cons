@@ -697,7 +697,7 @@ function joomdev_wpc_editor_button_popup(){
                 });
 
                 function htmlEntities(str) {
-                    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+                    return String(str).replace(/"/g, "'").replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
                 }
 
                 // save shortcode joomdev_wpc_save_shortcode
