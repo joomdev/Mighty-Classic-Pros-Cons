@@ -115,7 +115,7 @@ function joomdev_wpc_pros_cons($atts, $content){
 
     <?php if ( ! empty($verdict_text) ) { ?>
         <div class="wppc-verdict-wrapper">
-            <?php echo $verdict_text; ?>
+            <?php echo html_entity_decode($verdict_text); ?>
         </div>
     <?php } ?>
     

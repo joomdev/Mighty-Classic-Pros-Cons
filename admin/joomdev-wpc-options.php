@@ -445,17 +445,17 @@ function joomdev_wpc_editor_button_popup(){
                         </div>
                     </div>
                     <div class="clear"></div>
-
-                    <div class="column">
-                        <div class="joomdev_wpc_verdict_text">
-                            <label><h4>Verdict Text</h4>
-                                <input type="text" name="joomdev_wpc_verdict_text" class="regular-text" value="<?php echo $r['verdict_text']; ?>">
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="clear"></div>
                 </div>
+
+                <div class="column">
+                    <div class="joomdev_wpc_verdict_text">
+                        <label><h4>Verdict Text <small>(HTML Tags Supported)</small></h4>
+                            <textarea name="joomdev_wpc_verdict_text" id="" cols="60" rows="6"><?php echo $r['verdict_text']; ?></textarea>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
             
                 <div class="joomdev_wpc_save">
                     <button type="button" class="button button-primary button-large joomdev_wpc_save_shortcode">Insert Shortcode</button>
@@ -696,6 +696,10 @@ function joomdev_wpc_editor_button_popup(){
                     $(this).closest('.joomdev_wpc_con_single').remove();
                 });
 
+                function htmlEntities(str) {
+                    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+                }
+
                 // save shortcode joomdev_wpc_save_shortcode
                 $(document).on('click', '.joomdev_wpc_save_shortcode', function(e){
                     e.preventDefault();
@@ -727,7 +731,7 @@ function joomdev_wpc_editor_button_popup(){
                     button_rel_attr = $.trim(button_rel_attr);
 
                     var verdict_text = $(document).find('[name="joomdev_wpc_verdict_text"]').val();
-                    verdict_text = $.trim(verdict_text);
+                    verdict_text = htmlEntities(verdict_text);
 
                     var shortcode_string_pros = '';
                     $(document).find('[name="joomdev_wpc_pro_single[]"]').each(function(){
